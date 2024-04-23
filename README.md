@@ -47,15 +47,14 @@ Replace <input_filename>, <output_prefix>, <row_limit>, and <output_folder> with
 ## Example
 Splitting a file named ibm.csv (it has header) or ibmwoh.csv (it has no header) into smaller files with 500 records each (excluding the header for files created by split_csv_h):
 
-    ### CSV File with a header (by default)
-    ```bash
-    python csvfilesplitter.py split_csv ibm.csv ibm_output 500 ./ibm
+   * For CSVs with headers (by default):
+     ```bash
+     python csvfilesplitter.py split_csv ibm.csv ibm_output 500 ./ibm
 
    or
-
-    ### CSV File without a header
-    ```bash
-    python csvfilesplitter.py split_csv ibmwoh.csv ibmwoh_output 500 ./ibmwoh
+   * CSV File without a header:
+     ```bash
+     python csvfilesplitter.py split_csv ibmwoh.csv ibmwoh_output 500 ./ibmwoh
 
 The "ibm.csv" file has a header. The "ibmwoh.csv" file does not have a header. 
 ## Requirements
