@@ -33,33 +33,29 @@ To use this utility from GitHub:
    cd csv-splitter
 
 3. **Run the Script:**
-For CSVs without headers:
-bash
-Copy code
-python split_csv.py <input_filename> <output_prefix> <row_limit> <output_folder>
-For CSVs with headers:
-bash
-Copy code
-python split_csv_h.py <input_filename> <output_prefix> <row_limit> <output_folder>
+   * For CSVs without headers:
+     ```bash
+     python split_csv.py <input_filename> <output_prefix> <row_limit> <output_folder>
+   * For CSVs with headers:
+     ```bash
+     python split_csv_h.py <input_filename> <output_prefix> <row_limit> <output_folder>
+
 Replace <input_filename>, <output_prefix>, <row_limit>, and <output_folder> with your actual file path, desired output file prefix, maximum number of rows per output file, and output directory path, respectively.
-Example
+
+## Example
 Splitting a file named example.csv into smaller files with 500 records each (excluding the header for files created by split_csv_h):
 
-bash
-Copy code
-python split_csv_h.py example.csv example_output 500 ./output
-Requirements
-Python 3.x
-Standard libraries: os, csv, logging
+    ```bash
+    python split_csv_h.py example.csv example_output 500 ./output
+
+## Requirements
+    * Python 3.x
+    * Standard libraries: os, csv, logging
+
 Ensure Python is installed and properly configured in your environment to run the scripts.
 
-Contributions
+## Contributions
 Contributions are welcome! Please fork the repository and submit pull requests with your enhancements.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
-
-css
-Copy code
-
-This README is structured to provide a clear, easy-to-follow guide for us
