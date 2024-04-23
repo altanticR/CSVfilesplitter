@@ -45,7 +45,7 @@ To use this utility from GitHub:
 Replace <input_filename>, <output_prefix>, <row_limit>, and <output_folder> with your actual file path, desired output file prefix, maximum number of rows per output file, and output directory path, respectively.
 
 ## Example
-Splitting a file named example.csv into smaller files with 500 records each (excluding the header for files created by split_csv_h):
+Splitting a file named ibm.csv (it has header) or ibmwoh.csv (it has no header) into smaller files with 500 records each (excluding the header for files created by split_csv_h):
 
     ### CSV File with a header (by default)
     ```bash
