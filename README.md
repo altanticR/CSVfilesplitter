@@ -6,7 +6,7 @@ A Python utility to split large CSV files into smaller files based on a specifie
 
 The CSV Splitter Utility is designed to handle the division of large CSV files into manageable parts without requiring external libraries beyond Python's standard modules. This utility provides two main functions:
 
-- `split_csv_h`: Splits a CSV file with headers into multiple files, ensuring that each split file starts with the header followed by the specified number of rows. This is the default function if no function is specified.
+- `split_csv_h`: Splits a CSV file with headers into multiple files, ensuring that each split file starts with the header followed by the specified number of rows. This is the default function if no not specified.
 - `split_csv`: Splits a CSV file without headers into multiple files, each containing a specified number of rows.
 
 Both functions ensure that no data is lost during the splitting process and that files are named systematically for easy organization.
