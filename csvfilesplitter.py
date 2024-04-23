@@ -105,7 +105,8 @@ def split_csv_h(input_filename, output_prefix, row_limit, output_folder):
 if __name__ == "__main__":
     try:
         parser = argparse.ArgumentParser(description='Split a CSV file into multiple smaller files.')
-        parser.add_argument('function', choices=['split_csv', 'split_csv_h'], help='Function to run: split_csv for no headers, split_csv_h for headers.')
+        parser.add_argument('function', choices=['split_csv', 'split_csv_h'], default='split_csv_h', nargs='?',
+                        help='Function to run: split_csv for no headers, split_csv_h for headers. Default is split_csv_h.')
         parser.add_argument('input_filename', type=str, help='The path to the input CSV file.')
         parser.add_argument('output_prefix', type=str, help='The prefix for the output files.')
         parser.add_argument('row_limit', type=int, help='The maximum number of rows in each output file.')
