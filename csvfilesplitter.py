@@ -1,3 +1,4 @@
+import argparse
 import csv
 import os
 import logging
@@ -103,7 +104,19 @@ def split_csv_h(input_filename, output_prefix, row_limit, output_folder):
 # Usage
 if __name__ == "__main__":
     try:
-        split_csv('xylo.csv', 'xylo', 500, 'xyz')
-        print("File Splitting Done")
+        parser = argparse.ArgumentParser(description='Split a CSV file into multiple smaller files.')
+        parser.add_argument('function', choices=['split_csv', 'split_csv_h'], help='Function to run: split_csv for no headers, split_csv_h for headers.')
+        parser.add_argument('input_filename', type=str, help='The path to the input CSV file.')
+        parser.add_argument('output_prefix', type=str, help='The prefix for the output files.')
+        parser.add_argument('row_limit', type=int, help='The maximum number of rows in each output file.')
+        parser.add_argument('output_folder', type=str, help='The folder where the output files will be stored.')
+        args = parser.parse_args()
+
+        # Conditional execution based on user's choice
+        if args.function == 'split_csv':
+            split_csv(args.input_filename, args.output_prefix, args.row_limit, args.output_folder)
+        elif args.function == 'split_csv_h':
+            split_csv_h(args.input_filename, args.output_prefix, args.row_limit, args.output_folder)
+            print("File Splitting Done")
     except Exception as error:
         print(f"An error occurred: {error}")
